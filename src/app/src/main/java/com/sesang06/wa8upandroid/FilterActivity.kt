@@ -3,6 +3,8 @@ package com.sesang06.wa8upandroid
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
+import com.sesang06.wa8upandroid.adapter.FilterAdapter
+import com.sesang06.wa8upandroid.model.FilterModel
 import kotlinx.android.synthetic.main.activity_filter.*
 
 class FilterActivity : AppCompatActivity() {
@@ -12,7 +14,7 @@ class FilterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_filter)
         setUpFilterModels()
         recyclerview_filter.layoutManager = GridLayoutManager(this,2)
-        recyclerview_filter.adapter = FilterAdapter(this,filterModels)
+        recyclerview_filter.adapter = FilterAdapter(this, filterModels)
     }
     fun setUpFilterModels(){
         filterModels.add(FilterModel("카푸치노"))
