@@ -15,6 +15,9 @@ class FilterActivity : AppCompatActivity() {
         setUpFilterModels()
         recyclerview_filter.layoutManager = GridLayoutManager(this,2)
         recyclerview_filter.adapter = FilterAdapter(this, filterModels)
+        button_filter.setOnClickListener {
+            startActivity(StoresActivity.newIntent(this, filterModels))
+        }
     }
     fun setUpFilterModels(){
         filterModels.add(FilterModel("카푸치노"))

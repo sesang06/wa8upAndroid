@@ -19,7 +19,9 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".StoresActivity">
 
+        </activity>
     </application>
 
 </manifest>
