@@ -17,7 +17,7 @@ class FilterAdapter(val context: Context, val filter : ArrayList<FilterModel>) :
     }
 
     override fun onBindViewHolder(holder: FilterHolder, position: Int) {
-        holder?.title?.text = filter.get(position).filter
+        holder.title?.text = filter[position].filter
 
     }
     override fun getItemCount(): Int = this.filter.size

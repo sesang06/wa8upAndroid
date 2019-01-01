@@ -22,6 +22,9 @@
         <activity android:name=".StoresActivity">
 
         </activity>
+        <activity android:name=".StoreInfoActivity">
+
+        </activity>
     </application>
 
 </manifest>

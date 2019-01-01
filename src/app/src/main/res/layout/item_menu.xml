@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/imageview_menuitem_thumbnail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/textview_menuitem_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="아메리카노"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textview_menuitem_description"
+        />
+    <TextView
+        android:id="@+id/textview_menuitem_description"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="산뜻한 원두를 곁들인 메뉴"
+        app:layout_constraintTop_toBottomOf="@id/textview_menuitem_title"
+        app:layout_constraintBottom_toTopOf="@id/textview_menuitem_price"
+        />
+    <TextView
+        android:id="@+id/textview_menuitem_price"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="10000원"
+        app:layout_constraintTop_toBottomOf="@id/textview_menuitem_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+</android.support.constraint.ConstraintLayout>

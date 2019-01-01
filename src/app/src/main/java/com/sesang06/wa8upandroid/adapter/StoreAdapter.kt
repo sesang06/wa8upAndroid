@@ -12,7 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.sesang06.wa8upandroid.R
 import com.sesang06.wa8upandroid.model.StoreModel
 import kotlinx.android.synthetic.main.item_store.view.*
-class StoreAdapter(val context: Context, val stores : ArrayList<StoreModel>) : RecyclerView.Adapter<StoreAdapter.StoreHolder>(){
+class StoreAdapter(val context: Context, val stores : ArrayList<StoreModel>, val onClickListener: (StoreModel)->Unit) : RecyclerView.Adapter<StoreAdapter.StoreHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_store, parent, false)
@@ -21,12 +21,15 @@ class StoreAdapter(val context: Context, val stores : ArrayList<StoreModel>) : R
     }
 
     override fun onBindViewHolder(holder: StoreHolder, position: Int) {
-        holder?.title?.text = stores.get(position).store
+        holder.title?.text = stores[position].store
         Glide.with(context)
                 .load(R.drawable.ic_launcher_background)
                 .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.ALL))
                 .apply(RequestOptions.bitmapTransform(RoundedCorners(14)))
                 .into(holder?.thumbnail)
+        holder.itemView.setOnClickListener{
+            onClickListener(stores[position])
+        }
     }
     override fun getItemCount(): Int = this.stores.size
     inner class StoreHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

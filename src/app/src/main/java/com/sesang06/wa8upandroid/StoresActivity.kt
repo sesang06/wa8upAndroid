@@ -19,7 +19,7 @@ class StoresActivity : AppCompatActivity() {
         setContentView(R.layout.activity_stores)
         setUpStores()
         recyclerview_stores.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
-        recyclerview_stores.adapter = StoreAdapter(this, storeModels)
+        recyclerview_stores.adapter = StoreAdapter(this, storeModels) { storeModel: StoreModel -> storeModelClicked(storeModel) }
 //        val userId = intent.getStringExtra(INTENT_USER_ID)
 //                ?: throw IllegalStateException("field $INTENT_USER_ID missing in Intent")
     }
@@ -29,7 +29,9 @@ class StoresActivity : AppCompatActivity() {
         storeModels.add(StoreModel("백다방"))
         storeModels.add(StoreModel("카페베네"))
     }
-
+    private fun storeModelClicked(storeModel: StoreModel){
+        startActivity(StoreInfoActivity.newIntent(this, storeModel))
+    }
     companion object {
         private val INTENT_USER_ID = "user_id"
 
