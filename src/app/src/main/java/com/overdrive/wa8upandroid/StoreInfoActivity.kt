@@ -1,15 +1,15 @@
-package com.sesang06.wa8upandroid
+package com.overdrive.wa8upandroid
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import com.sesang06.wa8upandroid.adapter.MenuAdapter
-import com.sesang06.wa8upandroid.adapter.StoreAdapter
-import com.sesang06.wa8upandroid.model.FilterModel
-import com.sesang06.wa8upandroid.model.MenuModel
-import com.sesang06.wa8upandroid.model.StoreModel
+import com.overdrive.wa8upandroid.adapter.MenuAdapter
+import com.overdrive.wa8upandroid.adapter.StoreAdapter
+import com.overdrive.wa8upandroid.model.FilterModel
+import com.overdrive.wa8upandroid.model.MenuModel
+import com.overdrive.wa8upandroid.model.StoreModel
 import kotlinx.android.synthetic.main.activity_store_info.*
 
 class StoreInfoActivity : AppCompatActivity(){

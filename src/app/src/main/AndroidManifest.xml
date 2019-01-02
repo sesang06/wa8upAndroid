@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sesang06.wa8upandroid">
+    package="com.overdrive.wa8upandroid">
 
     <application
         android:allowBackup="true"

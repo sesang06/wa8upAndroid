@@ -1,4 +1,4 @@
-package com.sesang06.wa8upandroid
+package com.overdrive.wa8upandroid
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.sesang06.wa8upandroid.adapter
+package com.overdrive.wa8upandroid.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -9,8 +9,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
-import com.sesang06.wa8upandroid.R
-import com.sesang06.wa8upandroid.model.MenuModel
+import com.overdrive.wa8upandroid.R
+import com.overdrive.wa8upandroid.model.MenuModel
 import kotlinx.android.synthetic.main.item_menu.view.*
 
 class MenuAdapter(val context: Context, val menus : ArrayList<MenuModel>) : RecyclerView.Adapter<MenuAdapter.MenuHolder>(){

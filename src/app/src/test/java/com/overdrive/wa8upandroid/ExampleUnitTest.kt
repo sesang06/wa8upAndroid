@@ -1,4 +1,4 @@
-package com.sesang06.wa8upandroid
+package com.overdrive.wa8upandroid
 
 import org.junit.Test
 
