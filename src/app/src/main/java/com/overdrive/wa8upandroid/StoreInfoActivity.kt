@@ -20,6 +20,9 @@ class StoreInfoActivity : AppCompatActivity(){
         setUpMenus()
         recyclerview_storeinfo_menu.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         recyclerview_storeinfo_menu.adapter = MenuAdapter(this, menuModels)
+        button_storeinfo_order.setOnClickListener{
+            startActivity(ReserveActivity.newIntent(this,StoreModel("hello")))
+        }
     }
     private fun setUpMenus(){
         menuModels.add(MenuModel("아메리카노","아이스 아메리카노 한 잔", 4000))

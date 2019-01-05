@@ -25,6 +25,9 @@
         <activity android:name=".StoreInfoActivity">
 
         </activity>
+        <activity android:name=".ReserveActivity">
+
+        </activity>
     </application>
 
 </manifest>
